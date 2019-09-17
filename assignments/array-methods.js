@@ -120,7 +120,12 @@ console.log(`${emailList}`);
 
 // Problem 2
 // need an alphabetical list of last name, first name for participant check-in
+let checkInList = [];
 
+runners.forEach(function(elements) {
+  return checkInList.push(`${elements.last_name} ${elements.first_name}`)
+});
+console.log(`${checkInList.sort()}`);
 
 // Problem 3
 // list of all corporations participating so that they can be recognized for their participation and support
