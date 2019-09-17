@@ -83,9 +83,9 @@ console.log(`${firstNamesAllCaps}`);
 // The large shirts won't be available for the event due to an ordering issue. We need a filtered version of the runners array, containing only those runners with large sized shirts so they can choose a different size. This will be an array of objects.
 let runnersLargeSizeShirt = [];
 
-runners.filter(function(elements) {
-  if (elements.shirt_size === "L");
-    return runnersLargeSizeShirt.push(`${elements.last_name}`) //currently showing full name************
+runners.filter(runner => { 
+  if (runner.shirt_size == "L") 
+    return runnersLargeSizeShirt.push(`${Object.entries(runner)}`)
 });
 console.log(`${runnersLargeSizeShirt}`);
 
@@ -97,9 +97,9 @@ console.log(`${runnersLargeSizeShirt}`);
 let ticketPriceTotal = 0;
 
 runners.reduce(function(accumulator, item) {
-  console.log(`Accumulated Donations: ${accumulator}`); // does not add in the last donation?***********
+  console.log(`Accumulated Donations: ${accumulator}`);
   console.log(`New Donation: ${item.donation}`);
-  return accumulator += item.donation;
+  return ticketPriceTotal = accumulator += item.donation;
 }, 0);
 console.log(`${ticketPriceTotal}`);
 

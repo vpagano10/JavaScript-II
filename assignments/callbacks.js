@@ -36,7 +36,6 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
 
 // Challenge 1:
-
 function showLength(array, callback) {
   callback(array.length);
 };
@@ -49,12 +48,12 @@ showLength(items, (lengthOfList) => {
 
 // Challenge 2:
 function showLast(array, callback) {
-  callback(array[-1]);
+  callback(array[items.length - 1]);
 };
 showLast(items, (lastItem) => {
   console.log(`${lastItem}`);
 });
-// last passes the last item of the array into the callback.
+// showLast passes the last item of the array into the callback.
 
 
 
@@ -64,7 +63,7 @@ function sumNums(num1, num2, callback) {
 }
 const add = (num1, num2) => num1 + num2;
 console.log(sumNums(5, 5, add));
-// sumNums adds two numbers (x, y) and passes the result to the callback.       **WORKS**
+// sumNums adds two numbers (x, y) and passes the result to the callback.
 
 
 
@@ -74,7 +73,7 @@ function multiplyNums(num1, num2, callback) {
 }
 const multiply = (num1, num2) => num1 * num2;
 console.log(multiplyNums(5, 5, multiply));
-// multiplyNums multiplies two numbers and passes the result to the callback.   **WORKS**
+// multiplyNums multiplies two numbers and passes the result to the callback.
 
 
 
@@ -82,6 +81,7 @@ console.log(multiplyNums(5, 5, multiply));
 function contains(item, list, callback) {
   return callback(item, list);
 };
+console.log(items.includes("pen"));
 // contains checks if an item is present inside of the given array/list.
 // Pass true to the callback if it is, otherwise pass false.
 
